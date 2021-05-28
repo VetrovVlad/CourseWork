@@ -1,0 +1,31 @@
+﻿<Window x:Class="Course.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Course"
+        mc:Ignorable="d"
+        Title="Gym Application" Height="600" Width="800"
+        >
+    <Grid Background="#ffdadada">
+        <TextBox x:Name="test" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Cursor="IBeam"/>
+        <Border MinWidth="400" Margin="15" Background="#ffffff" VerticalAlignment="Center" Padding="30" MaxWidth="500" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightBlue" ShadowDepth="2"></DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Start you train now!!!" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" ></TextBlock>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Right" Content="Sign in" Click="ButtonSignClick"></Button>       
+                </Grid>
+                <TextBox x:Name="login" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="password" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <PasswordBox x:Name="password2" materialDesign:HintAssist.Hint="Confirm Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                <TextBox x:Name="email" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button Content="Register" Margin="0 20" Click="ButtonRegClick"/>
+            </StackPanel>
+        </Border>
+            
+    </Grid>
+</Window>

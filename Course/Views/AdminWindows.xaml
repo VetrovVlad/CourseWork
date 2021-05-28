@@ -1,0 +1,46 @@
+﻿<Window x:Class="Course.Views.Admin"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Course.Views"
+        mc:Ignorable="d"
+        Title="Admin" Height="472" Width="879" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+    <Grid Margin="0,0,-110,-45">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Border BorderBrush="LightGray" BorderThickness="0,0,1,0">
+                
+                    <StackPanel Margin="2,2,2,43">
+                    <Button Click="ButtonShowAllClick" Cursor="Hand" Margin="0 0 0 15">
+                            Show all users
+                        </Button>
+                    <Button Click="ButtonDeleteUser" Cursor="Hand">
+                        Delete user
+                    </Button>
+
+                </StackPanel>
+                
+
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <StackPanel>
+                <TextBox x:Name="allUsers" FontSize="15" FontWeight="Bold" Cursor="IBeam" Visibility="Collapsed"/>
+                <TextBox x:Name="login" materialDesign:HintAssist.Hint="Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Visibility="Hidden"/>
+                <Button Click="ButtonDelete" Cursor="Hand" Visibility="Hidden" Name="delete">
+                    Delete
+                </Button>
+            </StackPanel>
+        </Grid>
+
+
+    </Grid>
+</Window>
